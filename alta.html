@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Alistamiento - Artemis</title>
+    <link rel="stylesheet" href="css/Estilo.css">
+</head>
+<body class="page-alta">
+
+    <header class="main-header">
+        <div class="header-container">
+            <img src="SVG/Artemis.svg" alt="Logo Artemis" class="logo-left">
+            <div class="header-text">
+                <h1>Explora el Cosmos</h1>
+                <p>Tu portal de noticias intergalácticas y astronomía moderna.</p>
+            </div>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg" alt="Logo NASA" class="logo-right">
+        </div>
+    </header>
+
+    <main class="form-wrapper">
+        <div class="form-container">
+            <h2 class="form-title">Formulario de Alistamiento</h2>
+            <p class="form-instruction">Completa tus datos para formar parte de nuestra comunidad de exploradores.</p>
+            
+            <form action="index.html" method="GET">
+                <div class="form-grid">
+                    <div class="field">
+                        <label for="nombre">Nombre *</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="field">
+                        <label for="apellidos">Apellidos *</label>
+                        <input type="text" id="apellidos" name="apellidos" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="dni">DNI *</label>
+                        <input type="text" id="dni" name="dni" pattern="[0-9]{8}[A-Z]" required>
+                    </div>
+                    <div class="field">
+                        <label for="direccion">Dirección * (C/Calle Nº00 P0)</label>
+                        <input type="text" id="direccion" name="direccion" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="ciudad">Ciudad *</label>
+                        <input type="text" id="ciudad" name="ciudad" required>
+                    </div>
+                    <div class="field">
+                        <label for="pais">País *</label>
+                        <input type="text" id="pais" name="pais" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="cp">Código Postal *</label>
+                        <input type="text" id="cp" name="cp" list="cp-suggestions" required>
+                        <datalist id="cp-suggestions">
+                            <option value="28001">
+                            <option value="08001">
+                        </datalist>
+                    </div>
+                    <div class="field">
+                        <label for="nacimiento">Fecha de Nacimiento</label>
+                        <input type="date" id="nacimiento" name="nacimiento">
+                    </div>
+
+                    <div class="field">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="correo@correo.es">
+                    </div>
+                    <div class="field">
+                        <label for="password">Contraseña *</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                </div>
+
+                <div class="form-buttons">
+                    <button type="reset" class="btn btn-delete">Borrar</button>
+                    <button type="button" class="btn btn-cancel" onclick="window.location.href='index.html'">Cancelar</button>
+                    <button type="submit" class="btn btn-submit">Enviar Registro</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <p>Contacto: info@exploraelcosmos.com | Calle Estelar 123, Vía Láctea</p>
+    </footer>
+
+</body>
+</html>
